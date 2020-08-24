@@ -105,6 +105,8 @@ public class LocalAuthPlugin implements MethodCallHandler, FlutterPlugin, Activi
     this.result = result;
     switch (call.method) {
       case "authenticate":
+        this.authenticatePin(call,result);
+        break;
       case "authenticateWithBiometrics":
         this.authenticate(call, result);
         break;
